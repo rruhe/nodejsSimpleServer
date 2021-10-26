@@ -1,40 +1,15 @@
 console.log("js file at the end of the body loaded");
 
-(function generateDomElement() {
+(function () {
     let para = document.createElement("P");
     para.innerHTML = 'Stuff genareted by js';
     para.setAttribute("style", "color:red");
     para.style.backgroundColor = "yellow";
     para.style.fontFamily = "Impact";
-    para.style.fontSize = "1.3rem";
+    para.style.fontSize = "4.3rem";
     document.getElementsByTagName("div")[0].appendChild(para); 
+    // document.body.appendChild(para);
+    let h2var = document.createElement("h2");
+    h2var.innerHTML = "h2 mein Text dazu";
+    document.body.appendChild(h2var);
 })()
-
-
-class SuperHero {
-    constructor (name, alter) {
-        this._name = name;
-        this._alter = alter;
-      }
-
-      getAlter() {
-        return this._alter;
-      }
-      getName() {
-        return this._name;
-      }
-
-      setNewName () {
-        this._name += " HERO";
-      }
-}
-  
-let heroOfTheDay = new SuperHero( "Reimund", 58);
-let alter = heroOfTheDay.getAlter();
-
-heroOfTheDay.setNewName();
-console.log(heroOfTheDay.getName());
-console.log(heroOfTheDay.name);
-
-//   console.log(reimundsAlter);
-
