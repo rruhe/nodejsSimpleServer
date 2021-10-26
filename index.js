@@ -11,9 +11,11 @@ console.log(`Server started on port ${port}`);
 function handleRequest(req, res) {
   
   let pathname = req.url;
-  
-  if (pathname == '/') {
-    pathname = '/public/index.html';
+  console.log(req.url);
+  if (pathname == "/") {
+      pathname = "/public/index.html";
+  } else {
+      pathname = "/public/" + req.url;
   }
   
   // Callback function for 'readfile' 
