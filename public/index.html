@@ -12,10 +12,15 @@
 
 <body>
     <div>
-        <h1>The index.html file</h1>
-        <p>served by pure nodejs.</p>
+        <h1>A simple Node.js server</h1>
+        <p>served by pure node.js.</p>
+        <p>to start enter 'node index' in a Terminal</p>
+        <button type="button" onclick="getAPIData()"> get raw json data</button>
+        <button type="button" onclick="getAPIDataToTable()">get json data to table</button>
+        <div id="divJSONDataToTable">Data display in a table</div>
+        <div id="showData">raw json data</div>
     </div>
-    <script src="./assets/js/work.js"></script>
+    <script src="./assets/js/workClient.js"></script>
 </body>
 
 </html>

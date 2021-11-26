@@ -6,16 +6,16 @@ let port = 8080;
 let server = http.createServer(handleRequest);
 server.listen(port);
 
-console.log(`Server started on port ${port}`);
+console.log(`Web-Server started on http://localhost:${port} port`);
 
 function handleRequest(req, res) {
   
   let pathname = req.url;
-  console.log(req.url);
+  // console.log(req.url);
   if (pathname == "/") {
       pathname = "/public/index.html";
   } else {
-      pathname = "/public/" + req.url;
+      pathname = "/public" + req.url;
   }
   
   // Callback function for 'readfile' 
